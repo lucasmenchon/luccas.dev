@@ -1,0 +1,277 @@
+﻿@page "/"
+@inject BlazorWebProfile.Models.ThemeService ThemeService
+
+<MudContainer MaxWidth="MaxWidth.Medium">
+    <MudItem Class="d-flex justify-center pt-4 pb-4">
+        <MudImage Width="360" Src="@($"https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=16&duration=2000&pause=1000&color={(isDarkMode ? "F7F7F7" : "000000")}&center=true&vCenter=true&width=435&lines=Bem+vindo+ao+meu+website;Trabalho+principalmente+com;.NET+%E2%80%A2+C%23+%E2%80%A2+JavaScript+%E2%80%A2+ASP.NET+%E2%80%A2+Vue.js")" />
+    </MudItem>
+
+    <MudGrid Class="d-flex justify-center text-gray-200" Justify="Justify.Center">
+        <MudItem>
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Size="Size.Medium" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://github.com/lucasmenchon" Target="_blank" />
+        </MudItem>
+        <MudItem>
+            <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Size="Size.Medium" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://www.linkedin.com/in/lucasmenchon/" Target="_blank" />
+        </MudItem>
+        <MudItem>
+            <MudIconButton Icon="@Icons.Custom.Brands.Telegram" Size="Size.Medium" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://t.me/lucasmenchon" Target="_blank" />
+        </MudItem>
+    </MudGrid>
+
+
+    <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8 about" Color="Color.Inherit">
+        Resumo
+    </MudText>
+    <MudContainer Class="p-0">
+        <MudItem>
+            <MudText Align="Align.Center" Typo="Typo.body2">
+                Desenvolvedor .NET com experiência em C#, ASP.NET (MVC, Camadas), JavaScript, Vue.js,
+                HTML, Bootstrap, CSS, Ajax, jQuery. Bancos de dados MySql, SqlServer, Firebird e não relacional
+                (NoSql) Elastic.
+            </MudText>
+        </MudItem>
+    </MudContainer>
+
+    <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8" Color="Color.Inherit">
+        Educação
+    </MudText>
+    <MudContainer Class="p-0">
+        <MudGrid Justify="Justify.Center">
+            <MudItem xs="12" sm="6">
+                <MudPaper Elevation="4">
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudText Align="Align.Center" Typo="Typo.button">Universidade Paulista - UNIP</MudText>
+                    </MudItem>
+                    <MudDivider DividerType="DividerType.Middle" />
+                    <MudItem Class="p-1">
+                        <MudText Typo="Typo.body2" Align="Align.Center">• Superior de Tecnologia</MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Center">• Análise e Desenvolvimento de Sistemas</MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Center">• Abril/2022 - Abril/2024</MudText>
+                    </MudItem>
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudPaper Elevation="4">
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudText Typo="Typo.button">Etec Juscelino Kubitschek</MudText>
+                    </MudItem>
+                    <MudDivider DividerType="DividerType.Middle" />
+                    <MudItem Class="p-1">
+                        <MudText Typo="Typo.body2" Align="Align.Center">• Técnico</MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Center">• Desenvolvimento de Sistemas</MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Center">• Fevereiro/2021 - Junho/2022</MudText>
+                    </MudItem>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
+
+    <MudText Align="Align.Center" Typo="Typo.h5" Class="pt-8 pb-2 experience" Color="Color.Inherit">
+        Experiência
+    </MudText>
+    <MudContainer Class="p-0">
+        <MudTimeline TimelinePosition="TimelinePosition.Start" DisableModifiers="false" Class="pt-0 pb-0">
+            <MudTimelineItem Size="Size.Small" Color="Color.Success" Elevation="4">
+                <MudCard Elevation="25">
+                    <MudCardContent Class="p-2">
+                        <MudText Typo="Typo.body1">Vox Soluções em TI</MudText>
+                        <MudText Typo="Typo.body2" Class="mud-text-secondary">Desenvolvedor .NET Junior • Maio/2023 - o momento</MudText>
+                        <MudText Typo="Typo.body2" Class="text-secondary">Estagiário Desenvolvedor .NET • Julho/2022 - Abril/2023</MudText>
+                        <MudText Typo="Typo.body2">• Desenvolvimento, manutenção e aprimoramento de aplicações Web e Web API utilizando C#, ASP.NET (MVC e Camadas), JavaScript, Framework Vue, HTML, CSS, Bootstrap, jQuery e Ajax.</MudText>
+                        <MudText Typo="Typo.body2">• Experiência com bancos de dados MySql, SqlServer, Firebird e não relacionais (NoSQL) Elastic.</MudText>
+                        <MudText Typo="Typo.body2">• Trabalho em equipe efetivo utilizando a metodologia ágil Scrum.</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudTimelineItem>
+            <MudTimelineItem Size="Size.Small" Color="Color.Info" Elevation="4">
+                <MudCard Elevation="25">
+                    <MudCardContent Class="p-2">
+                        <MudText Typo="Typo.body1">4W Sites</MudText>
+                        <MudText Typo="Typo.body2" Class="mud-text-secondary">Estagiário Desenvolvedor Web • Dezembro/2021 - Junho/2022</MudText>
+                        <MudText Typo="Typo.body2">• Desenvolvimento, manutenção e melhoria de aplicação Web utilizando PHP, JavaScript, HTML, CSS, WordPress e MySql.</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudTimelineItem>
+            <MudTimelineItem Size="Size.Small" Color="Color.Info" Elevation="4">
+                <MudCard Elevation="25">
+                    <MudCardContent Class="p-2">
+                        <MudText Typo="Typo.body1">Regula Sinistros</MudText>
+                        <MudText Typo="Typo.body2" Class="mud-text-secondary">Assistente de TI • Abril/2021 - Novembro/2021</MudText>
+                        <MudText Typo="Typo.body2">• Melhorias e manutenção nos sites da empresa. PHP, JavaScript, HTML, CSS, Bootstrap e MySql.</MudText>
+                        <MudText Typo="Typo.body2">• Gestão de serviços e equipamentos de TI. Help desk.</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudTimelineItem>
+            <MudTimelineItem Size="Size.Small" Color="Color.Info" Elevation="4">
+                <MudCard Elevation="25">
+                    <MudCardContent Class="p-2">
+                        <MudText Typo="Typo.body1">Daivak</MudText>
+                        <MudText Typo="Typo.body2" Class="mud-text-secondary">Assistente Administrativo • Outubro/2019 - Janeiro/2020</MudText>
+                        <MudText Typo="Typo.body2">• Elaboração de pedidos, contas a pagar e receber, planilhas Excel e emissão de notas fiscais.</MudText>
+                        <MudText Typo="Typo.body2">• Ajuda em problemas relacionados a Tecnologia.</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudTimelineItem>
+            <MudTimelineItem Size="Size.Small" Color="Color.Info" Elevation="4" Class="pb-0">
+                <MudCard Elevation="25">
+                    <MudCardContent Class="p-2">
+                        <MudText Typo="Typo.body1">Lumiar Healthcare</MudText>
+                        <MudText Typo="Typo.body2" Class="mud-text-secondary">Assistente Técnico • Julho/2018 - Maio/2019</MudText>
+                        <MudText Typo="Typo.body2" Class="text-secondary">Aprendiz Administrativo • Outubro/2017 - Junho/2018</MudText>
+                        <MudText Typo="Typo.body2">• Desenvolvimento, manutenção e aprimoramento de aplicações Web e Web API utilizando C#, ASP.NET (MVC e Camadas), JavaScript, Framework Vue, HTML, CSS, Bootstrap, jQuery e Ajax.</MudText>
+                        <MudText Typo="Typo.body2">• Experiência com bancos de dados MySql, SqlServer, Firebird e não relacionais (NoSQL) Elastic.</MudText>
+                        <MudText Typo="Typo.body2">• Trabalho em equipe efetivo utilizando a metodologia ágil Scrum.</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudTimelineItem>
+        </MudTimeline>
+    </MudContainer>
+
+    <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8 projects" Color="Color.Inherit">
+        Projetos
+    </MudText>
+    <MudContainer Class="p-0">
+        <MudGrid Justify="Justify.Center">
+            <MudItem xs="12" sm="6">
+                <MudPaper Elevation="4">
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudText Align="Align.Center" Typo="Typo.button">Crud de Contatos: C# • ASP.NET</MudText>
+                    </MudItem>
+                    <MudDivider DividerType="DividerType.Middle" />
+                    <MudItem Class="p-1">
+                        <MudText Typo="Typo.body2" Align="Align.Center">
+                            Sistema de cadastro de contatos
+                            com funcionalidades de criação, atualização e exclusão de registros
+                            utilizando C# e ASP.NET
+                        </MudText>
+                    </MudItem>
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudItem Class="p-1">
+                            <MudButton Href="https://contatos.luccas.dev/" Color="Color.Inherit" Variant="Variant.Text" Size="Size.Small" Target="_blank">
+                                Acessar
+                            </MudButton>
+                        </MudItem>
+                        <MudItem Class="p-1">
+                            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Size="Size.Small" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://github.com/lucasmenchon/contacts-manage-project" Target="_blank" />
+                        </MudItem>
+                    </MudItem>
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudPaper Elevation="4">
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudText Typo="Typo.button">Crud de Contatos: Vue.js</MudText>
+                    </MudItem>
+                    <MudDivider DividerType="DividerType.Middle" />
+                    <MudItem Class="p-1">
+                        <MudText Typo="Typo.body2" Align="Align.Center">
+                            Sistema de cadastro de contatos
+                            com funcionalidades de criação, atualização e exclusão de registros
+                            utilizando Vue.js
+                        </MudText>
+                    </MudItem>
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudItem Class="p-1">
+                            <MudButton Href="https://lucasmenchon.github.io/simple-crud-vue/" Color="Color.Inherit" Variant="Variant.Text" Size="Size.Small" Target="_blank">
+                                Acessar
+                            </MudButton>
+                        </MudItem>
+                        <MudItem Class="p-1">
+                            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Size="Size.Small" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://github.com/lucasmenchon/simple-crud-vue" Target="_blank" />
+                        </MudItem>
+                    </MudItem>
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudPaper Elevation="4">
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudText Typo="Typo.button">Scoreboard: Vue.js</MudText>
+                    </MudItem>
+                    <MudDivider DividerType="DividerType.Middle" />
+                    <MudItem Class="p-1">
+                        <MudText Typo="Typo.body2" Align="Align.Center">
+                            Sistema de cadastro de equipes
+                            com funcionalidades de criação, atualização e exclusão de pontuações e membros
+                            utilizando Vue.js
+                        </MudText>
+                    </MudItem>
+                    <MudItem Class="p-1 d-flex justify-center">
+                        <MudItem Class="p-1">
+                            <MudButton Href="https://lucasmenchon.github.io/scoreboard/" Color="Color.Inherit" Variant="Variant.Text" Size="Size.Small" Target="_blank">
+                                Acessar
+                            </MudButton>
+                        </MudItem>
+                        <MudItem Class="p-1">
+                            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Size="Size.Small" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://github.com/lucasmenchon/scoreboard" Target="_blank" />
+                        </MudItem>
+                    </MudItem>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
+
+    <MudText Align="Align.Center" Typo="Typo.h5" Class="pt-8 pb-2 contact" Color="Color.Inherit">
+        Contato
+    </MudText>
+    <MudContainer Class="p-0 pb-2">
+        <MudText Typo="Typo.body2" Align="Align.Center">Posso ajudar com:</MudText>
+        <MudText Typo="Typo.body2" Align="Align.Center">
+            <MudIcon Icon="@Icons.Material.Filled.Check" Color="Color.Inherit" Size="Size.Small" />
+            .NET • C# • JavaScript • ASP.NET • Vue.js • Ajax
+        </MudText>
+        <MudText Typo="Typo.body2" Align="Align.Center">
+            <MudIcon Icon="@Icons.Material.Filled.Check" Color="Color.Inherit" Size="Size.Small" />
+            MySql • Sql Server • FireBird • Elastic(NoSQL)
+        </MudText>
+        <MudText Typo="Typo.body2" Align="Align.Center">
+            <MudIcon Icon="@Icons.Material.Filled.Check" Color="Color.Inherit" Size="Size.Small" />
+            HTML • BootStrap • CSS
+        </MudText>
+        <MudGrid Class="d-flex justify-center text-gray-200 pt-2 pb-2" Justify="Justify.Center">
+            <MudItem>
+                <MudIconButton Icon="@Icons.Custom.Brands.Telegram" Size="Size.Small" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://t.me/lucasmenchon" Target="_blank" />
+            </MudItem>
+            <MudItem>
+                <MudIconButton Icon="@Icons.Material.Filled.Email" Size="Size.Small" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="mailto:contato@luccas.dev" />
+            </MudItem>
+            <MudItem>
+                <MudIconButton Icon="@Icons.Material.Filled.Smartphone" Size="Size.Small" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="tel:+5511975528024" />
+            </MudItem>
+            <MudItem>
+                <MudIconButton Icon="@Icons.Custom.Brands.WhatsApp" Size="Size.Small" Color="@(isDarkMode ? Color.Inherit : Color.Primary)" Href="https://api.whatsapp.com/message/PMGGTQIJXHVMH1?autoload=1&app_absent=0" Target="_blank" />
+            </MudItem>
+        </MudGrid>        
+        <MudItem Class="d-flex justify-center">
+            <MudText Typo="Typo.body2" Align="Align.Center" Class="col-6">
+                Fale comigo via Telegram ou WhatsApp, envie um e-mail para contato@luccas.dev ou me ligue no +55 11 97552-8024.
+            </MudText>
+        </MudItem>
+    </MudContainer>
+</MudContainer>
+
+<MudDivider DividerType="DividerType.FullWidth" />
+
+<MudItem Class="p-2">
+    <MudItem Class="d-flex justify-content-center">
+        <MudText Typo="Typo.body2" Align="Align.End">Desenvolvido por luccas.dev</MudText>
+    </MudItem>
+    <MudItem Class="d-flex justify-content-center">
+        <MudText Typo="Typo.body2" Align="Align.Center">© Lucas Menchon. Todos os direitos reservados</MudText>
+    </MudItem>
+</MudItem>
+
+@code {
+    private bool isDarkMode;
+
+    protected override void OnInitialized()
+    {
+        isDarkMode = ThemeService.DarkMode;
+        ThemeService.OnThemeChanged += OnThemeChanged;
+    }
+
+    private void OnThemeChanged(bool darkMode)
+    {
+        isDarkMode = darkMode;
+        StateHasChanged();
+    }
+}
