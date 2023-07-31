@@ -75,6 +75,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        REPOSITORY_NAME: https://github.com/lucasmenchon/profile-blazor-webapp/
+        REPOSITORY_NAME: lucasmenchon/profile-blazor-webapp
         BRANCH: gh-pages
         FOLDER: release/wwwroot
