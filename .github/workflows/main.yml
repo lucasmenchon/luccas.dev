@@ -60,14 +60,16 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish BlazorWebProfile.csproj -c Release -o release --nologo
     
-    # changes the base-tag in index.html from '/' to 'profile-blazor-webapp' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to profile-blazor-webapp
-      run: sed -i 's/<base href="\/" \/>/<base href="\/profile-blazor-webapp\/" \/>/g' release/wwwroot/index.html
+    # changes the base-tag in index.html from '/' to 'profile-blazor-webapp' or 'luccas.dev(your domain?)' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to luccas.dev
+      run: sed -i 's/<base href="\/" \/>/<base href="\/luccas.dev\/" \/>/g' release/wwwroot/index.html
     
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
 
+
+    # add cname file for custom domain
     - name: add cname file
       run: touch release/wwwroot/CNAME && echo -e "luccas.dev" >> release/wwwroot/CNAME
 
@@ -77,7 +79,8 @@ jobs:
       
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}       
+      with:        
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: release/wwwroot
+        
