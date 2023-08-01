@@ -17,11 +17,12 @@
         <MudItem>
             <MudButton OnClick="@(() => ScrollToClassAsync(".contact"))" Color="Color.Inherit" Variant="Variant.Text" Size="Size.Small">Contato</MudButton>
         </MudItem>
-        <MudMenu Icon="@Icons.Material.Filled.MoreVert" Size="Size.Small" Color="Color.Inherit" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
+        <MudIconButton Class="p-0" OnClick="ToggleMode" Icon="@(isDarkMode ? Icons.Material.Filled.LightMode : Icons.Material.Filled.ModeNight)" Color="Color.Inherit" Size="Size.Small" />
+       @* <MudMenu Icon="@Icons.Material.Filled.MoreVert" Size="Size.Small" Color="Color.Inherit" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
             <MudMenuItem IconSize="Size.Small" OnClick="ToggleMode" OnTouch="ToggleMode" Class="p-1">
                 <MudIcon Icon="@(isDarkMode ? Icons.Material.Filled.LightMode : Icons.Material.Filled.ModeNight)" Color="Color.Inherit" Size="Size.Small" />
-            </MudMenuItem>            
-        </MudMenu>
+            </MudMenuItem>       
+        </MudMenu>*@
     </MudContainer>
 </MudAppBar>
 
