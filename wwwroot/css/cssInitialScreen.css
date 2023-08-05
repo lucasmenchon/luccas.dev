@@ -1,0 +1,13 @@
+﻿.loading-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #32333D;
+}
+
+.initialscreen {
+    width: 450px;
+    height: 450px;
+}
