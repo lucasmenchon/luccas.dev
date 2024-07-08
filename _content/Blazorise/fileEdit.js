@@ -1,4 +1,4 @@
-﻿import { getRequiredElement } from "./utilities.js?v=1.2.4.0";
+import { getRequiredElement } from "./utilities.js?v=1.5.3.0";
 
 const _instances = [];
 let nextFileId = 0;
@@ -78,7 +78,7 @@ function mapElementFilesToFileEntries(element) {
     element._blazorFilesById = {};
 
     let fileList = Array.prototype.map.call(element.files, function (file) {
-        file.id = ++nextFileId;
+        file.id = file.id ?? ++nextFileId;
         var fileEntry = {
             id: file.id,
             lastModified: new Date(file.lastModified).toISOString(),
@@ -99,8 +99,10 @@ function mapElementFilesToFileEntries(element) {
 
 async function onDrop(e, element) {
     e.preventDefault();
-    console.log(element);
     let fileInput = element;
+
+    if (fileInput.disabled)
+        return;
 
     let _files = await getFilesAsync(e.dataTransfer, fileInput.webkitdirectory, fileInput.multiple);
     fileInput.files = _files;
@@ -198,4 +200,3 @@ class FileEditInfo {
         this.elementId = elementId;
     }
 }
-
