@@ -3,7 +3,7 @@
 
 <MudContainer MaxWidth="MaxWidth.Medium">
     <MudItem Class="d-flex justify-center pt-4 pb-4">
-        <MudImage Width="360" Src="@($"https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=16&duration=2000&pause=1000&color={(isDarkMode ? "F7F7F7" : "000000")}&center=true&vCenter=true&width=435&lines=Bem+vindo+ao+meu+website;Trabalho+principalmente+com;.NET+%E2%80%A2+C%23+%E2%80%A2+JavaScript+%E2%80%A2+ASP.NET+%E2%80%A2+Vue.js")" />
+        <MudImage Width="360" Src="@($"https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=16&duration=2000&pause=1000&color={(isDarkMode ? "F7F7F7" : "000000")}&center=true&vCenter=true&width=435&lines=Bem+vindo+ao+meu+website;Trabalho+principalmente+com;.NET+%E2%80%A2+C%23+%E2%80%A2+ASP.NET")" />
     </MudItem>
 
     <MudGrid Class="d-flex justify-center text-gray-200" Justify="Justify.Center">
@@ -18,8 +18,8 @@
         </MudItem>
     </MudGrid>
 
-    <div style="position: fixed; bottom: 50; right: 0; z-index: 9999;">
-        <a href="https://wa.me/message/PMGGTQIJXHVMH1">
+    <div style="position: fixed; bottom: 50; right: 0; z-index: 9999;margin-right:10px;">
+        <a href="https://wa.me/message/PMGGTQIJXHVMH1" target="_blank">
             <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_dyf5lscb.json" speed="1.20"
                            style="width: 38px; height: 40px;" loop autoplay background="transparent"></lottie-player>
         </a>
@@ -32,8 +32,9 @@
     <MudContainer Class="p-0">
         <MudItem>
             <MudText Align="Align.Center" Typo="Typo.body2">
-                Desenvolvedor .NET com experiência em .NET Core/Framework C#, ASP.NET (API, MVC, CQRS), JavaScript,
-                TypeScript, Angular, Vue, HTML, CSS. Banco de dados SQL, Elastic (NoSQL).
+                Desenvolvedor .NET com experiência em .NET Core/Framework, C#, ASP.NET (API, MVC, CQRS), JavaScript, TypeScript, Angular, Vue, HTML, CSS. Banco de dados SQL, Elastic (NoSQL).
+                Conhecimento em diversos padrões e arquiteturas de desenvolvimento de software, como Clean Code, CQRS, DDD e microsserviços.
+                Acho essencial escrever código limpo e sustentável, adotando padrões e arquiteturas que garantam escalabilidade, modularidade e flexibilidade.
             </MudText>
         </MudItem>
     </MudContainer>
@@ -52,7 +53,7 @@
                     <MudItem Class="p-2">
                         <MudText Typo="Typo.body2" Align="Align.Center">• Superior de Tecnologia</MudText>
                         <MudText Typo="Typo.body2" Align="Align.Center">• Análise e Desenvolvimento de Sistemas</MudText>
-                        <MudText Typo="Typo.body2" Align="Align.Center">• Abril/2022 - Abril/2024</MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Center">• Março/2022 - Abril/2024</MudText>
                     </MudItem>
                 </MudPaper>
             </MudItem>
@@ -73,7 +74,7 @@
     </MudContainer>
 
     <MudText Align="Align.Center" Typo="Typo.h5" Class="pt-8 pb-2 experience" Color="Color.Inherit">
-        Experiência
+        Experiência Profissional
     </MudText>
     <MudContainer Class="p-0">
         <MudTimeline TimelinePosition="TimelinePosition.Start" DisableModifiers="true" Class="pt-0 pb-0">
@@ -118,13 +119,84 @@
                     <MudCardContent Class="p-2">
                         <MudText Typo="Typo.body1">Regula Sinistros</MudText>
                         <MudText Typo="Typo.body2" Class="mud-text-secondary">Assistente de TI • Abril/2021 - Novembro/2021</MudText>
-                        <MudText Typo="Typo.body2">• Aprimoramento e manutenção nos sites da empresa. PHP, JavaScript, HTML, CSS, Bootstrap e MySql.</MudText>
+                        <MudText Typo="Typo.body2">• Aprimoramento e manutenção nos sites da empresa. JavaScript, HTML, CSS, Bootstrap e MySql.</MudText>
                         <MudText Typo="Typo.body2">• Gestão de serviços e equipamentos de TI. Help desk.</MudText>
                     </MudCardContent>
                 </MudCard>
             </MudTimelineItem>
         </MudTimeline>
     </MudContainer>
+
+    <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8" Color="Color.Inherit">
+        Depoimentos
+    </MudText>
+    <MudCard Class="mud-width-full">
+        <MudCarousel Class="mud-width-full" Style="height:200px;" ShowArrows="false" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="false" TData="object">
+            <MudCarouselItem Transition="Transition.Slide">
+                <MudCard Elevation="0" Style="height:100%; overflow-y:auto;">
+                    <MudCardContent Class="p-2">
+                        <MudText Typo="Typo.body1" Align="Align.Left" Class="mt-2">
+                            "Lucas é um profissional extremamente dedicado e apaixonado por .Net.
+                            Ele se destaca por sua habilidade em estar sempre atualizado com as últimas novidades da stack e por sua constante busca em aplicar as melhores práticas de desenvolvimento."
+                        </MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Left" Class="mt-2">Jhoni Farias</MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Left">Software Developer II - BackOffice, Grupo Autoglass</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudCarouselItem>            
+        </MudCarousel>
+    </MudCard>
+
+
+
+    <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8" Color="Color.Inherit">
+        Habilidades
+    </MudText>
+    <MudContainer Class="p-0">
+        <MudGrid Justify="Justify.Center" Spacing="1">
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">.NET Core/Framework</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">C#</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">ASP.NET</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">JavaScript</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">TypeScript</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">Angular</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">Vue.js</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">Git</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">HTML</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">CSS</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">Bootstrap</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">SQL</MudChip>
+            </MudItem>
+            <MudItem>
+                <MudChip Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">Elastic (NoSQL)</MudChip>
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
+
+
 
     <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8 projects" Color="Color.Inherit">
         Projetos
