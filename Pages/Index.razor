@@ -25,7 +25,6 @@
         </a>
     </div>
 
-
     <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8 about" Color="Color.Inherit">
         Resumo
     </MudText>
@@ -130,24 +129,22 @@
     <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8" Color="Color.Inherit">
         Depoimentos
     </MudText>
-    <MudCard Class="mud-width-full">
-        <MudCarousel Class="mud-width-full" Style="height:200px;" ShowArrows="false" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="false" TData="object">
+    <MudPaper Class="mud-width-full" Style="height:350px;">
+        <MudCarousel Class="mud-width-full" ShowArrows="false" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="false" TData="object" Style="padding: 0;height:100%; display: flex; flex-direction: column; justify-content: center;">
             <MudCarouselItem Transition="Transition.Slide">
-                <MudCard Elevation="0" Style="height:100%; overflow-y:auto;">
-                    <MudCardContent Class="p-2">
-                        <MudText Typo="Typo.body1" Align="Align.Left" Class="mt-2">
+                <MudPaper Elevation="0" Style="height:100%; display: flex; align-items: center; overflow-y:auto;">
+                    <MudPaper Class="p-5" Style="display: flex; flex-direction: column; justify-content: center; height:100%;">
+                        <MudText Typo="Typo.body2" Align="Align.Justify">
                             "Lucas é um profissional extremamente dedicado e apaixonado por .Net.
                             Ele se destaca por sua habilidade em estar sempre atualizado com as últimas novidades da stack e por sua constante busca em aplicar as melhores práticas de desenvolvimento."
                         </MudText>
                         <MudText Typo="Typo.body2" Align="Align.Left" Class="mt-2">Jhoni Farias</MudText>
-                        <MudText Typo="Typo.body2" Align="Align.Left">Software Developer II - BackOffice, Grupo Autoglass</MudText>
-                    </MudCardContent>
-                </MudCard>
+                        <MudText Typo="Typo.caption" Align="Align.Left">Software Developer II - BackOffice, Grupo Autoglass</MudText>
+                    </MudPaper>
+                </MudPaper>
             </MudCarouselItem>
         </MudCarousel>
-    </MudCard>
-
-
+    </MudPaper>
 
     <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8" Color="Color.Inherit">
         Habilidades
@@ -155,7 +152,7 @@
     <MudContainer Class="p-0">
         <MudGrid Justify="Justify.Center" Spacing="1">
             <MudItem>
-                <MudChip T="string" Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled"> .NET Core/Framework</MudChip>               
+                <MudChip T="string" Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled"> .NET Core/Framework</MudChip>
             </MudItem>
             <MudItem>
                 <MudChip T="string" Color="@(isDarkMode ? Color.Dark : Color.Primary)" Variant="Variant.Filled">C#</MudChip>
@@ -195,8 +192,6 @@
             </MudItem>
         </MudGrid>
     </MudContainer>
-
-
 
     <MudText Align="Align.Center" Typo="Typo.h5" Class="pb-2 pt-8 projects" Color="Color.Inherit">
         Projetos
